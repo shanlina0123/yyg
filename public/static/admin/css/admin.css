@@ -1,0 +1,177 @@
+.file {
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #d4e3ec;
+    border-radius: 4px;
+    overflow: hidden;
+    line-height: 20px;
+    background: url('../images/image.png') center no-repeat;
+    width: 110px;
+    height: 110px;
+}
+.file input {
+    opacity: 0;
+    width: 88px;
+    height: 75px;
+}
+#images_area{
+	float: left;
+    margin-right: 5px;
+}
+.btn_up{
+	position: relative;
+	float: left;
+   }
+.picture_item{
+	float: left;
+	position: relative;
+	margin-left: 5px;
+}
+.upload_success{
+	position: absolute;
+	top: 70px;
+    left: 70px;
+	width: 44px;
+	height: 44px;
+	background: url('../images/success.png') no-repeat;
+}
+.picture_del{
+	position: absolute;
+	width: 15px;
+  top: 0px;
+  left: 95px;
+  color: #fff;
+  height: 15px;
+  cursor: pointer;
+  background-size: 105px;
+  background-position: -30px 0;
+}
+.tip{
+	display: none;
+	position: absolute;
+    top: 43px;
+    padding: 3px;
+    left: 30px;
+    width: 60px;
+    min-height: 18px;
+    background-color: rgba(139, 195, 74, 0.69);
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 17px;
+}
+.index_picture{
+	position: absolute;
+    font-size: 12px;
+    top: 45px;
+    left: 25px;
+	background-color: rgba(206, 64, 64, 0.75);
+    color: #fff;
+    text-align: center;
+    line-height: 17px;
+    width: 60px;
+    height: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+.picture_item:hover .index_picture{
+	display: block;
+}
+/**分页**/
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+.pagination > li {
+  display: inline;
+}
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: #1B242F;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #E74C3C;
+  background-color: none;
+  border-color: #ddd;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #1B242F;
+  border-color: #1B242F;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #999;
+  cursor: not-allowed;
+  background-color: #fff;
+  border-color: #ddd;
+}
+/* 提交按钮 */
+.submit_btn ol{ width: 280px; margin:auto;}
+.submit_btn ol li { float: left; height: 40px; padding-bottom: 30px; margin-top: 20px;display: inline-block;width: 120px;}
+.submit_btn ol li a{ width:120px; height: 40px;line-height: 40px;background:#45c8dc;color: #fff; font-size: 16px; display: inline-block; text-align: center; border-radius: 5px;}
+.submit_btn ol li:first-child { margin-right: 40px}
+.submit_btn ol li a.bac_aaa{ background: #aaa;}
+
+/* 角色管理--添加 */
+.role_add { width: 1100px;margin:0px auto; padding-top: 50px}
+.role_add ul li{ width: 700px;padding: 0px 50px 0px 0px; line-height: 30px; margin: auto;margin-bottom:5px; }
+.role_add ul li span { width: 100px; margin-right:5px; color: #666; line-height: 30px; float: left; text-align: right; color: #666}
+.role_add ul li select,.role_add ul li input { width: 500px; border: 1px solid #efefef; border-radius: 3px; line-height: 30px; height: 30px; font-size: 14px; color: #333; padding-left: 5px}
+.role_add ul li .roleinput_all {width: 495px; height: 70px;line-height:30px;border: 1px solid #efefef; border-radius: 3px;font-size: 14px; color: #333; padding:5px; resize:none;}
+.role_add ul li select{ width: 508px}
+/* 角色管理表格 */
+
+
+.role_table dl { width: 980px;background: #fff; margin:auto;line-height: 38px; height: auto; float: left;}
+.role_table dl:first-child{border-top: 1px solid #efefef;}
+.role_table dl dt,.role_table dl dd{ border: 1px solid #efefef;display: inline-block;font-size: 14px; color: #666; float: left;border-top:none; background: #fff}
+.role_table dl dt{ width: 179px;text-align: center;}
+.role_table dl dd{ width: 770px;padding-left: 27px; border-left: none; }
+.role_table dl p { width: 770px;margin-top: 12px;line-height: 28px;height: 28px;}
+.role_table dl p i{ width: 770px;  }
+.role_table dl p i b { width: 120px;display: inline-block; float: left;padding-bottom: 5px;}
+.role_table dl p i input[type=checkbox] {visibility: hidden;display: none; }
+.role_table dl p i label {margin-bottom: 5px;line-height: 18px;font-weight: normal;}
+.role_table dl p i .checkboxdd{height: 18px;display: block;float: left;cursor: pointer;background:url(../images/checkboxno.png) no-repeat; text-indent: 20px}
+.role_table dl p i .cur{border:none;height: 18px;background:url(../images/checkboxyes.png) no-repeat;text-indent: 20px;display: inline-block;}
+.role_table dl p i.num_check b:first-child { padding-left: 0px;}
+.role_table dl p i.num_check b { padding-left: 20px;}
+
+.role_table dl dt p { margin-left: 50px;}
