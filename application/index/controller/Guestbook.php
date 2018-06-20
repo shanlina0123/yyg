@@ -10,10 +10,11 @@ use think\View;
 class Guestbook extends Common
 {
     /**
-     * 留言本
+     * 合作加盟
      * *
     **/
     public function index($cid = 0){
+
         $cat_info = Category::get($cid);
 
         $template_list = $cat_info['template_list'];
@@ -50,17 +51,15 @@ class Guestbook extends Common
             $this->error('请填写姓名');
         }
 
-        if ($data['content'] == ''){
-            $this->error('请填写留言内容');
-        }
+        $data['content']="合作加盟";
 
         $params = input('post.');
         $comment = new Comment();
 
         if($comment->data($params,true)->save()){
-            $this->success('留言成功');
+            $this->success('提交成功');
         }else{
-            $this->error('留言失败，请稍后重试');
+            $this->error('提交失败，请稍后重试');
         }
 
     }

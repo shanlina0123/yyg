@@ -65,6 +65,12 @@
                                     </td>
                                 </tr>
                                 {/case}
+                                {case value="img"}
+                                <tr>
+                                    {include file="public/upload" tip="公众号二维码" /}
+                                </tr>
+                                {/case}
+
                                 {default /}
                                 <tr>
                                     <td align="right">{$vo.title}</td>

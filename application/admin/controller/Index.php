@@ -72,6 +72,11 @@ class Index extends Common
             try {
                 $params = input('post.');
                 foreach ($params as $name => $value) {
+                    if($name=="pic_url")
+                    {
+                        $name="site_img";
+                        $value=$value[0];
+                    }
                     $flag = Db::name('system')->where('name', $name)->update(['value' => $value]);
                 }
             } catch (Exception $e) {

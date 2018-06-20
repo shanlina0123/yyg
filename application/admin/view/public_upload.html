@@ -54,7 +54,17 @@
             </div>
             <div class="clear"></div>
         {/if}
-    </div>                  
+        <!--系統配置缩略图 site_img 字段判断是否来自文章模型-->
+        {if condition="isset($vo['value']) and $vo['value'] neq null" }
+        <div class="picture_item">
+            <img src="{$vo['value']}" width="110" height="110">
+            <div class="upload_success"></div>
+            <div class="layui-layer-ico picture_del"></div>
+            <input type="hidden" name="pic_url[]" value="{$vo['value']}" />
+        </div>
+        <div class="clear"></div>
+        {/if}
+    </div>
 
     <div class="btn_up">
         <a href="javascript:;" class="file">
