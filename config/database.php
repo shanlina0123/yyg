@@ -1,8 +1,8 @@
 <?php return array (
   'type' => 'mysql',
-  'hostname' => '127.0.0.1',
-  'username' => 'root',
-  'password' => '',
+  'hostname' => '192.168.15.222',
+  'username' => 'dev_yyg',
+  'password' => 'c.123',
   'database' => 'yygsoft',
   'prefix' => 'yygsoft_',
   'dsn' => '',
