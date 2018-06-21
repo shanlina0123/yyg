@@ -16,7 +16,7 @@
 			<div class="ban z_a"><span class="f"><font style="font-size:16px;font-weight:bolder;">{$cate.name}</font> <font style="font-weight:bold;color:#3b3b3b;">{$cate.ename}</font></span><span class="more">您当前的位置：{position /}</span></div>
 				<div class="clear"></div>
 				<div class="z_con">
-					{$cate.content}
+					{:html_entity_decode(html_entity_decode($cate.content))}
 				</div>
 		</div>
 	</div>
