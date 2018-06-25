@@ -17,7 +17,7 @@ return [
     // 模板引擎类型 支持 php think 支持扩展
     'type'         => 'Think',
     // 模板路径
-    'view_path'    => './template/mobile/'.get_system_value('site_theme').'/',
+    'view_path'    => './template/mobile/'.get_system_value('site_mobile_theme').'/',
     // 模板后缀
     'view_suffix'  => 'html',
     "layout_on"=>true,
@@ -30,7 +30,7 @@ return [
     // 标签库标签结束标记
     'taglib_end'   => '}',
     'tpl_replace_string'       => [
-        '__PUBLIC__' => __ROOT__.'/template/mobile/'.get_system_value('site_theme').'/',
+        '__PUBLIC__' => __ROOT__.'/template/mobile/'.get_system_value('site_mobile_theme').'/',
         '__COMMON__' => __ROOT__.'/static/common'
     ],
 ];
