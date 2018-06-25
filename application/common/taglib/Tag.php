@@ -20,13 +20,13 @@ class Tag extends TagLib
         // 标签定义： attr 属性列表 close 是否闭合（0 或者1 默认1） alias 标签别名 level 嵌套层次
         'web' => ['attr' => 'name', 'close' => 0],
         'nav' => ['attr' => 'pid,limit,orderby,type'],
-        'product' => ['attr' => 'cid,field,orderby,limit,pagesize'],
+        'product' => ['attr' => 'cid,field,orderby,limit,pagesize,brand'],
         'article' => ['attr' => 'cid,field,orderby,limit,pagesize,empty'],
         'archived' => ['close' => 1],
         'anlink' => ['attr' => 'type,limit', 'close' => 1],
         'content' => ['attr' => 'id,field,length', 'close' => 0],
         'ann' => ['attr' => 'id,length', 'close' => 0],
-        'banner' => ['attr' => 'id,limit'],
+        'banner' => ['attr' => 'cid,id,limit'],
         'guestbook' => ['close' => 0],
         'position' => ['close' => 0],
         'chat' => ['close' => 0]
@@ -66,20 +66,7 @@ EOF;
         return $parse;
     }
 
-    /**
-     * 聊天室
-     * @return string
-     */
-    public function tagChat()
-    {
-        $parse = <<<EOF
-        <?php
-                \$chat = url('index/chat');
-                echo \$chat;
-                ?>
-EOF;
-        return $parse;
-    }
+
 
     /**
      * 获取当前位置
@@ -159,7 +146,7 @@ EOF;
      */
     public function tagNav($tag, $content)
     {
-        $pid = $tag['pid'];
+        $pid =  isset($tag['pid']) ? $tag['pid'] : '';
         $limit = isset($tag['limit']) ? $tag['limit'] : 0;
         $type = isset($tag['type']) ? $tag['type'] : 0;
         $parse = <<<EOF
@@ -206,6 +193,7 @@ EOF;
     public function tagProduct($tag, $content)
     {
         $cid = isset($tag['cid']) ? $tag['cid'] : 0;
+        $brand = isset($tag['brand']) ? $tag['brand'] : '';
         $order = isset($tag['orderby']) ? $tag['orderby'] : '';
         $limit = isset($tag['limit']) ? $tag['limit'] : 0;
         $pagesize = isset($tag['pagesize']) ? $tag['pagesize'] : 0;
@@ -216,6 +204,9 @@ EOF;
                 \$list = think\Db::name('product')->where(['status' => 0]);
                 if ($cid != 0){
                     \$list=\$list->where(['cid'=> $cid]);
+                }
+                 if ("$brand" != ''&&$cid != 0){
+                    \$list=\$list->where(['cid'=> $cid,'brand'=>"$brand" ]);
                 }
                 if("$field" != ''){
                     \$list=\$list->field("$field");
@@ -338,11 +329,11 @@ EOF;
      */
     public function tagBanner($tag, $content)
     {
-        $pid = $tag['id'];
+        $cid =  isset($tag['cid']) ? $tag['cid'] : 0;
         $limit = isset($tag['limit']) ? $tag['limit'] : '';
         $parse = <<<EOF
         <?php
-               \$__LIST__ = think\Db::name('banner_detail')->where(['pid'=> $pid]);
+              \$__LIST__ = think\Db::name('banner_detail')->where(['cid'=> $cid]);
                if("$limit" != ''){
                         \$__LIST__=\$__LIST__->limit($limit);
                     }
@@ -356,5 +347,6 @@ EOF;
         $parse .= '<?php endforeach; ?>';
         return $parse;
     }
+
 
 }

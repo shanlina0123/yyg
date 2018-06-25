@@ -8,20 +8,20 @@
     <div id="dcMain">
         <!-- 当前位置 -->
         {js href="__PUBLIC__/js/jquery.autotextarea.js" /}
-        <div id="urHere"><a>管理中心</a><b>></b><strong>修改产品</strong></div>
+        <div id="urHere"><a>管理中心</a><b>></b><strong>修改</strong></div>
         <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3><a href="{:url('product/index')}" class="actionBtn">产品列表</a>修改产品</h3>
+            <h3><a href="{:url('product/index')}" class="actionBtn">列表</a>修改</h3>
 
             <form>
                 <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
                     <tr>
-                        <td width="90" align="right">产品名称</td>
+                        <td width="90" align="right">名称</td>
                         <td>
                             <input type="text" name="title" value="{$item.title}" size="80" class="inpMain" required />
                         </td>
                     </tr>
                     <tr>
-                        <td align="right">产品分类</td>
+                        <td align="right">分类</td>
                         <td>
                             <select name="cid">
                                 <option value="0">未分类</option>
@@ -44,15 +44,16 @@
                         </td>
                     </tr>
                     <tr>
-                        <td width="90" align="right">产品品牌</td>
+                        <td width="90" align="right">布局</td>
                         <td>
-                            <input type="text" name="brand" value="{$item.brand}" size="50" class="inpMain"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="90" align="right">产品单位</td>
-                        <td>
-                            <input type="text" name="units" value="{$item.units}" size="10" placeholder="例：kg，个" class="inpMain"/>
+                            <select name="brand">
+                                <option value="Section1" {if condition="$item.brand eq 'Section1'"}selected="selected"{/if}>Section1</option>
+                                <option value="Section2" {if condition="$item.brand eq 'Section2'"}selected="selected"{/if}>Section2</option>
+                                <option value="Section3" {if condition="$item.brand eq 'Section3'"}selected="selected"{/if}>Section3</option>
+                                <option value="Section4" {if condition="$item.brand eq 'Section4'"}selected="selected"{/if}>Section4</option>
+                                <option value="Section5" {if condition="$item.brand eq 'Section5'"}selected="selected"{/if}>Section5</option>
+                                <option value="Section6" {if condition="$item.brand eq 'Section6'"}selected="selected"{/if}>Section6</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -62,19 +63,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="right">产品价格</td>
-                        <td>
-                            <input type="text" name="price" value="{$item.price}" size="10" placeholder="0.00" class="inpMain" required/> <font color="#FF0000"> * 单位：元</font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">市场价格</td>
-                        <td>
-                            <input type="text" name="marketprice" value="{$item.marketprice}" size="10" placeholder="0.00" class="inpMain" required/> <font color="#FF0000"> * 单位：元</font>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right" valign="top">产品描述</td>
+                        <td align="right" valign="top">描述</td>
                         <td>
                              <!-- 富文本框 -->
                             {include file="public/editor" /}
@@ -82,7 +71,7 @@
                     </tr>
                     <tr>
                         <!--上传图片-->
-                        {include file="public/upload" tip="产品图片" /}
+                        {include file="public/upload" tip="图片" /}
                     </tr>
                     <tr>
                         <td align="right">关键字</td>

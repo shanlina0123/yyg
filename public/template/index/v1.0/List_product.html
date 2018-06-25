@@ -1,0 +1,107 @@
+<div class="w1200">
+    <style>
+        .edtion2right span {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .editionleft span {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .starwrap{
+            float: left!important;
+            padding:52px 0 10px 0!important;
+            margin-bottom: 0!important;
+        }
+
+        .starwrap >li {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border-radius: 250px;
+            background-color: #FF5722;
+        }
+
+        .starwrap .lititle, .starwrap .texts {
+           display: block;
+        }
+
+
+    </style>
+    {product cid='$cid' brand='Section1'}
+    <p class="protext">{$product.title}</p>
+    <div  id="test-editormd-view2" style="padding: 0px;">
+        {if condition="get_system_value('site_editor') eq 'ue'"}
+        {:html_entity_decode($product.content)}
+        {else/}
+        <textarea style="display:none;">{$product.content}</textarea>
+        {/if}
+    </div>
+    {/product}
+
+    <!--分版本介绍-->
+    <div class="editionwarp">
+        <!--云易装PC版功能说明-->
+        {product cid='$cid' brand='Section2'}
+        <p class="protext">{$product.description}</p>
+        <div class="edition3 w1200 clearfix">
+            <div class="editionleft fl"><span>{$product.title}</span></div>
+            {if condition="get_system_value('site_editor') eq 'ue'"}
+            {:html_entity_decode($product.content)}
+            {else/}
+            <textarea style="display:none;">{$product.content}</textarea>
+            {/if}
+        </div>
+        {/product}
+        <!--云易装小程序装修公司端-->
+        {product cid='$cid' brand='Section3'}
+        <div class="edition2 w1200 clearfix">
+            <div class="edtion2left fl">
+                {if condition="get_system_value('site_editor') eq 'ue'"}
+                {:html_entity_decode($product.content)}
+                {else/}
+                <textarea style="display:none;">{$product.content}</textarea>
+                {/if}
+            </div>
+            <div class="edtion2right fl" style="background: url(__PUBLIC__images/phonebg.png) center no-repeat;">
+                <span>{$product.title}</span>
+            </div>
+            {/product}
+        </div>
+        <!--云易装小程序客户端-->
+        {product cid='$cid' brand='Section4'}
+        <div class="edition1 w1200 clearfix">
+            <div class="editionleft editionleft3 fl"
+                 style="background: url(__PUBLIC__images/phonebg.png) center no-repeat;">
+                <span>{$product.title}</span>
+            </div>
+                {if condition="get_system_value('site_editor') eq 'ue'"}
+                {:html_entity_decode($product.content)}
+                {else/}
+                <textarea style="display:none;">{$product.content}</textarea>
+                {/if}
+        </div>
+        {/product}
+    </div>
+    <!--文字描述-->
+    {product cid='$cid' brand='Section5'}
+        {if condition="get_system_value('site_editor') eq 'ue'"}
+        {:html_entity_decode($product.content)}
+        {else/}
+        <textarea style="display:none;">{$product.content}</textarea>
+        {/if}
+    {/product}
+    <!--版本功能对比-->
+    {product cid='$cid' brand='Section6'}
+    <div class="productbottomwrap">
+        <p class="protext">{$product.title}</p>
+        {if condition="get_system_value('site_editor') eq 'ue'"}
+        {:html_entity_decode($product.content)}
+        {else/}
+        <textarea style="display:none;">{$product.content}</textarea>
+        {/if}
+    </div>
+    {/product}
+    {include file="Public/markdown"/}
+</div>

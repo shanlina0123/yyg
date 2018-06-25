@@ -4,28 +4,24 @@
         <!-- 当前位置 -->
         <div id="urHere">管理中心<b>></b><strong>合作加盟</strong></div>
         <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-       <!--  {:url('comment/add')} -->
-            <!-- <h3><a href="javascript:;" class="actionBtn">添加友链</a>合作加盟</h3> -->
+            <h3>合作加盟</h3>
             <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
                 <tr>
                     <th width="30" align="center">编号</th>
                     <th align="left">公司名称</th>
-                    <th align="left">联系人</th>
+                    <th align="center">联系人</th>
                     <th align="center">联系电话</th>
                     <th align="center">提交时间</th>
-                    <th align="center">跟进</th>
                     <th align="center">操作</th>
                 </tr>
                 {volist name="list" id="vo"}
                 <tr>
                     <td align="center">{$vo.id}</td>
                     <td>{$vo.title}</td>
-                    <td style="color: red;">{$vo.username}</td>
+                    <td align="center">{$vo.username}</td>
                     <td align="center">{$vo.tel}</td>
                     <td align="center">{$vo.create_time}</td>
-                    <td align="center">{$vo.content}</td>
-                    <td align="center"> <a data-url="{:url('comment/add',['id' => $vo.id])}" class="btn reply-comment">回 复</a> <a class="del btn btn-danger" data-id="{$vo['id']}">删 除</a></td>
-
+                    <td align="center"> <a class="del btn btn-danger" data-id="{$vo['id']}">删 除</a></td>
                 </tr>
                 {/volist}
             </table>
@@ -40,7 +36,7 @@
     $('.reply-comment').click(function(){
       var url = $(this).data('url');
         layer.open({
-          title: '回复留言',
+          title: '跟进',
           type: 2,
           area: ['700px', '530px'],
           fixed: false, //不固定

@@ -6,6 +6,7 @@ namespace app\admin\controller;
 
 use app\common\model\Banner as bannerModel;
 use app\common\model\BannerDetail;
+use app\common\model\Category;
 use think\Db;
 
 class Banner extends Common
@@ -32,7 +33,7 @@ class Banner extends Common
             if (true !== $result) {
                 return ['status' => 0, 'msg' => $result, 'url' => ''];
             }
-
+            $params["title"]=Category::where(['id'=> $params['cid']])->value('name');
             $banner = new bannerModel();
             if ($banner->data($params, true)->save()) {
                 return ['status' => 1, 'msg' => '添加成功', 'url' => url('banner/index')];
@@ -61,8 +62,9 @@ class Banner extends Common
             if (true !== $result) {
                 return ['status' => 0, 'msg' => $result, 'url' => ''];
             }
-
+            $params["title"]=Category::where(['id'=> $params['cid']])->value('name');
             $banner->title = $params['title'];
+            $banner->cid = $params['cid'];
             $banner->type = $params['type'];
             $banner->start_time = $params['start_time'];
             $banner->end_time = $params['end_time'];
@@ -114,6 +116,7 @@ class Banner extends Common
         if (request()->isAjax()) {
             //新增处理
             $params = input('post.');
+            $params["cid"]=bannerModel::where("id",$params["pid"])->value("cid");
             $bannerDetail = new BannerDetail();
             if ($bannerDetail->data($params, true)->save()) {
                 return ['status' => 1, 'msg' => '添加成功', 'url' => url('banner/banlist')];
@@ -136,6 +139,7 @@ class Banner extends Common
         if (request()->isPost()) {
             $params = input('post.');
 
+            $params["cid"]=bannerModel::where("id",$params["pid"])->value("cid");
             $bannerDetail = new BannerDetail();
             if (false !== $bannerDetail->save($params,['id' => $params['id']])) {
                 return ['status' => 1, 'msg' => '修改成功', 'url' => url('banner/banlist')];

@@ -11,10 +11,11 @@
             <form>
                 {:token()}
                 <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+
                     <tr>
-                        <td width="100" align="right">图片标题</td>
+                        <td  align="right" style="width:150px;">标题</td>
                         <td>
-                            <input type="text" name="title" value="{$item.title}" size="40" class="inpMain"/>
+                            <input type="text" name="title" value="{$item.title}" size="50" class="inpMain"/>
                         </td>
                     </tr>
                     <tr>
@@ -22,15 +23,34 @@
                         {include file="public/upload" tip="图片"}
                     </tr>
                     <tr>
-                        <td align="right">url地址</td>
+                        <td align="right" style="width:150px;">url地址</td>
                         <td>
                             <input type="text" name="url" size="80" value="{$item.url}" class="inpMain" placeholder="请填写带协议头(http://)的完整url地址 提示：可不填" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  align="right" style="width:150px;">副标题</td>
+                        <td>
+                            <input type="text" name="childtitle" value="{$item.childtitle}" size="50" class="inpMain"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="width:150px;">链接标题</td>
+                        <td>
+                            <input type="text" name="childatitle" value="{$item.childatitle}" size="50" class="inpMain"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  align="right" style="width:150px;">按钮文字</td>
+                        <td>
+                            <input type="text" name="btntitle" value="{$item.btntitle}" size="50" class="inpMain"/>
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>
                             <input type="hidden" name="id" value="{$item.id}" />
+                            <input type="hidden" name="pid" value="{$item.pid}" />
                             <span class="btn">提 交</span>
                         </td>
                     </tr>

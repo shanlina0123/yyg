@@ -8,7 +8,7 @@ use think\Db;
 use think\facade\Request;
 use think\facade\Session;
 use think\facade\Config;
-
+use app\common\model\System;
 class Common extends Controller
 {
     /*
@@ -37,6 +37,8 @@ class Common extends Controller
         //查询文章分类
         $cate = Category::get(['modelid' => 1, 'status' => 1]);
         $this->assign('rcate', $cate);
+
+
     }
 
     /*

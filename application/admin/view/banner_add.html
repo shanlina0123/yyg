@@ -20,11 +20,18 @@
                                         </select>
                                     </td>
                                 </tr>
-                                 <tr>
-                                    <td width="80" height="35" align="right">标题</td>
+                                <tr>
+                                    <td  align="right" style="width:150px;">栏目</td>
                                     <td>
-                                        <input type="text" id="banner_name" name="title" value="" size="50" class="inpMain"
-                                               required="required"/>
+                                        <select name="cid" >
+                                            <option value="0"> 首页</option>
+                                            {nav type='0'}
+                                               <option value="{$nav.id}"> {$nav.name}</option>
+                                                {nav pid='$nav[id]'}
+                                                <option value="{$nav.id}"> - {$nav.name}</option>
+                                                {/nav}
+                                            {/nav}
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr class="adver">

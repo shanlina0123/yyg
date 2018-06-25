@@ -1,0 +1,21 @@
+<header>
+	<div class="headinner w1200 clearfix">
+		<a href="{:url('index/index')}" class="logolink fl"><img src="__PUBLIC__images/logo.png" class="logo"></a>
+		<ul class="nav fl">
+			<li {if condition="$cid eq 0"} class="on" {/if}><a href="{:url('index/index')}">首页</a></li>
+			{nav pid='' type=''}{if condition="$nav.type==0"}
+			<li {if condition="$cid eq $nav.id"} class="on" {/if}>
+					<a href="{$nav.url}">{$nav.name}</a>
+						<div class="subnav">
+							{nav pid='$nav[id]'}
+							<a href="{$nav.url}">{$nav.name}</a>
+							{/nav}
+						</div>
+				</li>
+			{/if}{/nav}
+		</ul>
+		{nav pid=''}{if condition="$nav.type==1"}
+		<a href="{$nav.outurl}" class="topRightBtn fr" target="_black">{$nav.name}</a>
+		{/if}{/nav}
+	</div>
+</header>

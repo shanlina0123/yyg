@@ -12,11 +12,10 @@ use think\Validate;
 
 class Banner extends Validate {
     protected $rule = [
-        'title' => 'require|max:25|token',
+        'cid' => 'require|token',
     ];
 
     protected $message = [
-        'title.require' => '标题不能为空',
-        'title.max' => '标题最多不能超过25个字符',
+        'cid.require' => '栏目不能为空',
     ];
 }

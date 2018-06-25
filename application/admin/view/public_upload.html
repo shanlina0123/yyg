@@ -55,7 +55,7 @@
             <div class="clear"></div>
         {/if}
         <!--系統配置缩略图 site_img 字段判断是否来自文章模型-->
-        {if condition="isset($vo['value']) and $vo['value'] neq null" }
+        {if condition="isset($vo) and isset($vo['value']) and $vo['tvalue'] eq 'img' and $vo['value'] neq null" }
         <div class="picture_item">
             <img src="{$vo['value']}" width="110" height="110">
             <div class="upload_success"></div>

@@ -1,0 +1,22 @@
+<div class="w1200">
+    <div class="newdetail">
+        <div class="newtite">{$content.title}</div>
+        <div class="newout clearfix">
+            <div class="lefttip fl">标签：{$content.keywords}</div>
+            <div class="hadsee fl">阅读：{$content.click}</div>
+            <div class="fr">{$content.publishtime|date='Y-m-d'}</div>
+        </div>
+        <div class="detaildescribe">
+            <span>【摘要】</span>{$content.description}
+        </div>
+        <div class="newcontent"  id="test-editormd-view2">
+            {if condition="get_system_value('site_editor') eq 'ue'"}
+                {:html_entity_decode($content.content)}
+            {else/}
+                 <textarea style="display:none;">{$content.content}</textarea>
+                {include file="Public/markdown"/}
+            {/if}
+        </div>
+    </div>
+</div>
+

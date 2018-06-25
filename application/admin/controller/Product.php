@@ -36,7 +36,7 @@ class Product extends Common
         $where = ['status' => 0];
         $id && $where['cid'] = $id;
         $list = productModel::where($where)
-            ->order('flag DESC,publishtime DESC')
+            ->order('publishtime DESC')
             ->paginate(10);
         foreach ($list as &$m) {
             $m['name'] = $m->cid ? $m->category->name : '';
