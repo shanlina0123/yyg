@@ -137,12 +137,12 @@ class Article extends Common
         } else {
             $ids = input('param.id/d', 0);
         }
-
+	
         //逻辑删除
         if (articleModel::where('id', 'in', $ids)->update(['status' => 1])) {
             return ['status' => 1, 'msg' => '删除成功'];
         } else {
-            return ['status' => 0, 'msg' => '删除失败'];
+            return ['status' => 0, 'msg' =>'删除失败'];
         }
     }
 
