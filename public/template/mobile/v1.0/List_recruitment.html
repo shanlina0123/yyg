@@ -1,0 +1,23 @@
+<div class="w1200" id="test-editormd-view2">
+	<ul class="recruitul">
+		{product cid='$cid' pagesize='10'}
+		<li class=" clearfix">
+			<div class="leftpart fl" style="background: url({$product.litpic}) center no-repeat">
+				<span class="recruitname">{$product.title}</span>
+			</div>
+			<div class="rightpart fl">
+				{if condition="get_system_value('site_editor') eq 'ue'"}
+				{:html_entity_decode($product.content)}
+				{else/}
+				<textarea style="display:none;">{$product.content}</textarea>
+				{include file="Public/markdown"/}
+				{/if}
+			</div>
+		</li>
+		{/product}
+	</ul>
+</div>
+
+
+
+

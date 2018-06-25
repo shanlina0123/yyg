@@ -1,0 +1,378 @@
+/*标签*/
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+textarea,
+select,
+button,
+fieldset,
+legend,
+img,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+th,
+td,
+pre,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+html {
+  color: #333;
+  background: #fff;
+  font-size: 62.5%;
+}
+body,
+button,
+input,
+select,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.4em;
+  font-family: microsoft yahei, SimSun, Verdana, Arial, sans-serif;
+}
+img,
+fieldset {
+  border: 0;
+  vertical-align: middle;
+}
+textarea {
+  word-wrap: break-word;
+  word-break: break-all;
+  resize: none;
+}
+li {
+  list-style: none;
+}
+img {
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  color: #628828;
+}
+a:focus {
+  outline: none;
+}
+/*位置*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/*字体大小*/
+.f14 {
+  font-size: 14px;
+}
+.f18 {
+  font-size: 16px;
+}
+.f20 {
+  font-size: 18px;
+}
+/*内容宽度*/
+.w1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+/*清理浮动*/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.wrap {
+  min-width: 1200px;
+}
+/*头部*/
+header {
+  border-bottom: 1px solid #ddd;
+}
+.main {
+  padding-bottom: 370px;
+}
+.logolink {
+  display: block;
+  height: 80px;
+  line-height: 80px;
+}
+.nav {
+  margin-left: 180px;
+}
+.nav li {
+  float: left;
+  height: 80px;
+  line-height: 80px;
+  position: relative;
+  border-bottom: 3px solid #fff;
+}
+.nav li > a {
+  display: block;
+  padding: 0 30px;
+  font-size: 14px;
+}
+.nav li:hover > a {
+  color: #01AAED;
+}
+.nav li:hover .subnav {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  display: block;
+}
+.nav li.on {
+  border-color: #01AAED;
+}
+.nav li.on > a {
+  color: #01AAED;
+}
+.nav li .subnav {
+  display: none;
+  position: absolute;
+  top: 83px;
+  left: 0;
+  width: 100%;
+}
+.nav li .subnav a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+}
+.nav li .subnav a:hover {
+  color: #01AAED;
+}
+.topRightBtn {
+  display: block;
+  font-size: 14px;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  background-color: #01AAED;
+  margin-top: 20px;
+}
+.topRightBtn:hover {
+  color: #fff;
+  opacity: .8;
+}
+/*底部*/
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 352px;
+  background: url(../images/blackbg.png) left top;
+}
+.copyright {
+  text-align: center;
+  line-height: 46px;
+  color: #fff;
+  border-top: 1px solid #ddd;
+}
+.foorinner {
+  padding-top: 35px;
+  padding-bottom: 10px;
+}
+.footleft {
+  width: 600px;
+}
+.footleft .contactnotice {
+  color: #fff;
+  margin-bottom: 15px;
+}
+.footleft .formitem {
+  margin-bottom: 15px;
+}
+.footleft .formitem input {
+  width: 400px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  padding: 0 10px;
+  border: 1px solid #707682;
+  outline: none;
+}
+.footleft .submitbtn {
+  display: block;
+  width: 420px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  background-color: #01AAED;
+  border: none;
+}
+.footright {
+  width: 580px;
+  margin-left: 20px;
+}
+.footright .messageul {
+  margin-top: 35px;
+}
+.footright .messageul li {
+  color: #fff;
+  margin-bottom: 15px;
+  line-height: 25px;
+}
+.footright .messageul li span {
+  margin-left: 10px;
+}
+/*右侧导航*/
+.rightlink {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  z-index: 3000;
+}
+.rightlink li {
+  margin-bottom: 10px;
+  position: relative;
+}
+.rightlink li a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+.rightlink li .phonenum {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 0;
+  right: 50px;
+  color: #fff;
+  transition: opacity 1s;
+  background-color: #01AAED;
+  opacity: 0;
+}
+.rightlink li .erweimaimg {
+  position: absolute;
+  right: 55px;
+  top: 0;
+  transition: opacity 1s;
+  opacity: 0;
+}
+.rightlink li .phonelink {
+  background: #f0f0f0 url(../images/righticon1.png) center 15px no-repeat;
+}
+.rightlink li .phonelink:hover {
+  background-position: center -62px;
+  background-color: #01AAED;
+}
+.rightlink li .erweimalink {
+  background: #f0f0f0 url(../images/righticon2.png) center 12px no-repeat;
+}
+.rightlink li .erweimalink:hover {
+  background-position: center -59px;
+  background-color: #01AAED;
+}
+.rightlink li .gotoplink {
+  background: #f0f0f0 url(../images/righticon3.png) center 10px no-repeat;
+}
+.rightlink li .gotoplink:hover {
+  background-position: center -59px;
+  background-color: #01AAED;
+}
+.rightlink .phonelinkwrap:hover .phonenum {
+  opacity: 1;
+  transition-duration: .5s;
+}
+.rightlink .erweimawrap:hover .erweimaimg {
+  opacity: 1;
+  transition-duration: .5s;
+}
+/*分页*/
+.page {
+  padding: 50px 0 30px 0;
+  text-align: center;
+}
+.page .pageList {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 0;
+}
+.page .pageList a {
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 9px;
+  border: 1px solid #dfdfdf;
+  background-color: #fff;
+  color: #999;
+  margin: 0 5px;
+  margin-top: 2px;
+}
+.page .pageList a:hover,
+.page .pageList .active {
+  background-color: #01AAED;
+  color: #fff;
+  border-color: #01AAED;
+}
+.page .pageList .prev {
+  height: 17px;
+}
+.page .pageList .next {
+  width: 12px;
+  height: 17px;
+}
+.page .pageList input {
+  font-size: 12px;
+  border: none;
+  background-color: #f1f1f1;
+  padding: 8px 9px;
+  margin-left: 12px;
+}
+.page .pageList .PageIndex {
+  width: 32px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  display: inline-block;
+  margin-top: 2px;
+  padding: 0;
+}
+.page .pageList .goToPage {
+  font-size: 12px;
+  display: inline-block;
+  padding: 0 3px 0 8px;
+  color: #999;
+}

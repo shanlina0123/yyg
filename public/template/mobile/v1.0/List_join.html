@@ -1,0 +1,30 @@
+<div class="w1200">
+	{product cid='$cid' brand='Section1'}
+	<p class="toptext">{$product.title}</p>
+	<div class="topdes clearfix">
+		<div class="topleft fl"><img src="{$product.litpic}"></div>
+		<div class="topright fl">
+			{if condition="get_system_value('site_editor') eq 'ue'"}
+			{:html_entity_decode($product.content)}
+			{else/}
+			<textarea style="display:none;">{$product.content}</textarea>
+			{/if}
+		</div>
+	</div>
+	{/product}
+
+	{product cid='$cid' brand='Section2'}
+	<p class="toptext">{$product.title}</p>
+	<div class="bottomdes">
+		{if condition="get_system_value('site_editor') eq 'ue'"}
+		{:html_entity_decode($product.content)}
+		{else/}
+		<textarea style="display:none;">{$product.content}</textarea>
+		{/if}
+	</div>
+	{/product}
+	{include file="Public/markdown"/}
+</div>
+
+
+

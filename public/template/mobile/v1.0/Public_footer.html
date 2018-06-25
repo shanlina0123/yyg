@@ -1,0 +1,45 @@
+<footer  id="btnlink">
+	<div class="foorinner w1200 clearfix">
+		<div class="footleft fl">
+			<p class="contactnotice">请留下您的联系方式，我们会尽快联系您！</p>
+			<form action="{guestbook /}" method="post">
+				<div class="formitem">
+					<input type="text" placeholder="请输入您的公司名称"  name="title" required="required" >
+				</div>
+				<div class="formitem">
+					<input type="text" placeholder="请输入您的姓名"  name="username" required="required" >
+				</div>
+				<div class="formitem">
+					<input type="text" placeholder="请输入您的联系电话"  name="tel" required="required" >
+				</div>
+				<div class="centerbtn"><button class="submitbtn">提交</button></div>
+			</form>
+		</div>
+		<div class="footright fl">
+			<ul class="messageul">
+				<li><img src="__PUBLIC__images/icon1.png" width="30"><span>公司地址：</span>{web name='address' /}</li>
+				<li><img src="__PUBLIC__images/icon2.png" width="30"><span>联系电话：</span>{web name='tel' /}</li>
+				<li><img src="__PUBLIC__images/icon3.png" width="30"><span>人才招聘：</span>{web name='email' /}</li>
+				<li><img src="__PUBLIC__images/icon4.png" width="30"><span>地铁线路：</span>{web name='metro' /}</li>
+				<li><img src="__PUBLIC__images/icon5.png" width="30"><span>驾车线路：</span>{web name='drive' /}</li>
+			</ul>
+		</div>
+	</div>
+	<div class="copyright">
+		{web name='icp' /}
+	</div>
+</footer>
+<ul class="rightlink">
+	<li class="phonelinkwrap">
+		<a href="javascript:;" class="phonelink"></a>
+		<span class="phonenum">{web name='tel' /}</span>
+	</li>
+	<li class="erweimawrap">
+		<a href="javascript:;" class="erweimalink"></a>
+		<img src="{web name='img' /}" class="erweimaimg">
+	</li>
+	<li>
+		<a href="javascript:;" class="gotoplink"></a>
+	</li>
+</ul>
+<script type="text/javascript" src="__PUBLIC__js/common.js"></script>
