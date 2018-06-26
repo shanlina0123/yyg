@@ -5,7 +5,7 @@
 			<li {if condition="$cid eq 0"} class="on" {/if}><a href="{:url('index/index')}">首页</a></li>
 			{nav pid='' type=''}{if condition="$nav.position eq 1"}
 			<li {if condition="($cid eq $nav.id) or (($cid eq 51) and ($nav.id eq 46))"} class="on" {/if}>
-			<a href="{if condition="$nav.type eq 1"}{$nav.outurl}{else/}{$nav.url} {/if}">{$nav.name}</a>
+			<a href="{$nav.url}">{$nav.name}</a>
 			<div class="subnav">
 				{nav pid='$nav[id]'}
 				<a href="{$nav.url}" >{$nav.name}</a>
