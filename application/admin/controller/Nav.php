@@ -60,6 +60,7 @@ class Nav extends Common
             return $this->fetch();
         } elseif (request()->isPost()) {
             $data = input('post.');
+            $data["innerurl"]=$data["type"]==2?$data["outurl"]:"";
             if ($data['type'] == 0 && !$data['modelid']) {
                 return ['status' => 0, 'msg' => '请先选择栏目模型'];
             }
@@ -81,6 +82,7 @@ class Nav extends Common
     {
         if (request()->isPost()) {
             $data = input('post.');
+            $data["innerurl"]=$data["type"]==2?$data["outurl"]:"";
             $category = new Category();
 
             if (false !== $category->save($data, ['id' => $data['id']])) {

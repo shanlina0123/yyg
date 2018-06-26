@@ -23,7 +23,7 @@
                     {volist name="all_nav" id="fnav"}
                     <tr>
                         <td>{$fnav.id}</td>
-                        <td>{$fnav.name} {if condition="$fnav.type eq 1"}<span class="top-it">外链</span>{/if} </td>
+                        <td>{$fnav.name} {if condition="$fnav.type eq 1"}<span class="top-it">外链 </span>{/if}{if condition="$fnav.type eq 2"}<span class="top-it">内链 </span>{/if}</td>
                         <td><a href="{$fnav.url}" target="_blank">{$fnav.url}</a></td>
                         <td align="center">{if condition="$fnav['status'] eq 0"}显示{else /}不显示{/if}</td>
                         <td align="center">{$fnav.sort}</td>
