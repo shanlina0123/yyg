@@ -1,49 +1,70 @@
 <div class="w1200">
 	<style>
-		.imagewrap div{
-			width: 580px;
-			height: 285px;
-			float: left;
-			margin-bottom:20px;
-		}
-		.imagewrap div img{
-			width: 100%;
-			height: 100%;
-			max-width: 100%;
-			max-height: 100%
-		}
-		.imagewrap div:nth-child(2n-1){
-			margin-right: 20px;
+	.imagewrap div{
+	width: 580px;
+	height: 285px;
+	float: left;
+	margin-bottom:20px;
+	}
+	.imagewrap div img{
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	max-height: 100%
+	}
+	.imagewrap div:nth-child(2n-1){
+	margin-right: 20px;
 
-		}
+	}
 	</style>
+	{product cid='$cid' brand='Section1'}
 	<div class="contentpart">
-		{product cid='$cid' brand='Section1'}
+		<div class="abouttitle">
+			<span>{$product.title}</span>
+		</div>
+		<ul>
+			<li class="clearfix">
+				{if condition="get_system_value('site_editor') eq 'ue'"}
+				{:html_entity_decode($product.content)}
+				{else/}
+				<textarea style="display:none;" id="test-editormd-view2">{$product.content}</textarea>
+				{/if}
+			</li>
+		</ul>
+	</div>
+	{/product}
+	{product cid='$cid' brand='Section2'}
+	<div class="contentpart">
+		<div class="abouttitle">
+			<span>{$product.title}</span>
+		</div>
+		{if condition="get_system_value('site_editor') eq 'ue'"}
+		{:html_entity_decode($product.content)}
+		{else/}
+		<textarea style="display:none;" id="test-editormd-view2">{$product.content}</textarea>
+		{/if}
+	</div>
+	{/product}
+	{product cid='$cid' brand='Section3'}
+	<div class="contentpart">
 		<div class="abouttitle">
 			<span>{$product.title}</span>
 		</div>
 		<p class="content">
-			{if condition="get_system_value('site_editor') eq 'ue'"}
-			{:html_entity_decode($product.content)}
-			{else/}
-			<textarea style="display:none;">{$product.content}</textarea>
-			{/if}
+			<img src="{$product.litpic}">
 		</p>
-		{/product}
 	</div>
+	{/product}
+	{product cid='$cid' brand='Section4'}
 	<div class="contentpart">
-		{product cid='$cid' brand='Section2'}
-		{if condition="get_system_value('site_editor') eq 'ue'"}
-		{:html_entity_decode($product.content)}
-		{else/}
-		<textarea style="display:none;">{$product.content}</textarea>
-		{/if}
-		<div class="imagewrap clearfix">
-			<?php $urls=explode("|",$product["pictureurls"]);?>
-			{foreach name='$urls' item='v' key='k'}
-			 <div><img  src="{$v}"></div>
-			{/foreach}
+		<div class="abouttitle">
+			<span>{$product.title}</span>
 		</div>
-		{/product}
+		<ul>
+			<li class="clearfix">
+				<img class="rightimg" src="{$product.litpic}">
+			</li>
+		</ul>
 	</div>
+	{/product}
 </div>

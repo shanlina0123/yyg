@@ -2,8 +2,8 @@
     <div class="newdetail">
         <div class="newtite">{$content.title}</div>
         <div class="newout clearfix">
-            <div class="lefttip fl">标签：{$content.keywords}</div>
-            <div class="hadsee fl">阅读：{$content.click}</div>
+            {if condition="$content.keywords"}<div class="lefttip fl">标签：{$content.keywords}</div>{/if}
+            <div class="hadsee fr">阅读：{$content.click}</div>
             <div class="fr">{$content.publishtime|date='Y-m-d'}</div>
         </div>
         <div class="detaildescribe">

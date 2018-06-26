@@ -1,22 +1,27 @@
+<p class="newtitle w1200">新闻中心</p>
 <ul class="newsList w1200">
 	{article cid='$cid' pagesize='15' orderby="publishtime desc"}
+	{if condition="$article.litpic neq ''"}
 	<li class="clearfix">
 		<a href="{$article.url}" class="newleft fl">
-			<img src="{$article.litpic}" width="300">
+			<img src="{$article.litpic}">
 		</a>
 		<div class="newright fl">
-			<a href="{$article.url}" class="newname" title="{$article.title}">{$article.title}</a>
-			<p class="newdescribe" >{$article.description}......</p>
-			<div class="morewrap clearfix">
-				<div class="lefttip fl">标签：<span>{$article.keywords}</span></div>
-				<div class="hadread fl">阅读：<span>{$article.click}</span></div>
-				<a href="{$article.url}" class="newmore fr">[阅读全文]</a>
-				<span class="fr">{$article.publishtime|date='Y-m-d'}</span>
-			</div>
+			<a href="{$article.url}" class="newname" title="{$article.title}”">{$article.title}</a>
+			<p class="newdescribe">{$article.description}</p>
 		</div>
+		<a href="{$article.url}" class="newmore fl">了解详情 ></a>
 	</li>
+    {else/}
+	<li class="noimgli clearfix">
+		<div class="newright fl">
+			<a href="{$article.url}" class="newname" title="{$article.title}">{$article.title}</a>
+			<p class="newdescribe">{$article.description}</p>
+		</div>
+		<a href="{$article.url}" class="newmore fl">了解详情 ></a>
+	</li>
+	{/if}
 	{/article}
 </ul>
 <!--分页-->
-
 {include file="Public/page"/}

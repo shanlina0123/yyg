@@ -32,7 +32,7 @@ function getAllCategory($status, $pid = '', $limit = '')
         //生成url，前端调用
         if ($val['type'] == 1){
             $val['url'] = $val['outurl'];
-        }if ($val['type'] == 2){
+        }elseif ($val['type'] == 2){
             $val['url'] = "/".$module.$val['innerurl'];
         } elseif ($val['modelid'] == 6){
             $val['url'] = url($module.'/guestbook/index', ['cid' => $val['id']]);
