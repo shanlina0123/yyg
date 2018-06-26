@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>http://www.yygsoft.com</loc>
+        <priority>1.00</priority>
+        <lastmod>2018-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>http://www.yygsoft.com/index/index/index.html</loc>
+        <priority>0.5</priority>
+        <lastmod>2018-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>http://www.yygsoft.com/index/listing/index/cid/55.html</loc>
+        <priority>0.5</priority>
+        <lastmod>2018-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>http://www.yygsoft.com/index/listing/index/cid/50.html</loc>
+        <priority>0.5</priority>
+        <lastmod>2018-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>http://www.yygsoft.com/index/listing/index/cid/51.html</loc>
+        <priority>0.5</priority>
+        <lastmod>2018-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>http://www.yygsoft.com/index/listing/index/cid/49.html</loc>
+        <priority>0.5</priority>
+        <lastmod>2018-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>http://www.yygsoft.com/index/listing/index/cid/47.html</loc>
+        <priority>0.5</priority>
+        <lastmod>2018-06-26</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+</urlset>
+

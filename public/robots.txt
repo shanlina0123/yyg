@@ -1,2 +1,8 @@
+# robots.txt generated at http://tool.chinaz.com/robots/
 User-agent: *
 Disallow:
+Disallow: /admin/
+Sitemap: http://www.yygsoft.com/sitemap.html
+Sitemap: http://www.yygsoft.com/sitemap.xml
+Sitemap: http://yygsoft.com/sitemap.html
+Sitemap: http://yygsoft.com/sitemap.xml
