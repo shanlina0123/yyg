@@ -1,16 +1,16 @@
-<footer  id="btnlink">
+<footer>
 	<div class="foorinner w1200 clearfix">
 		<div class="footleft fl">
 			<p class="contactnotice">请留下您的联系方式，我们会尽快联系您！</p>
 			<form action="{guestbook /}" method="post">
 				<div class="formitem">
-					<input type="text" placeholder="请输入您的公司名称"  name="title" required="required" >
+					<input type="text" placeholder="请输入您的公司名称">
 				</div>
 				<div class="formitem">
-					<input type="text" placeholder="请输入您的姓名"  name="username" required="required" >
+					<input type="text" placeholder="请输入您的姓名">
 				</div>
 				<div class="formitem">
-					<input type="text" placeholder="请输入您的联系电话"  name="tel" required="required" >
+					<input type="text" placeholder="请输入您的联系电话">
 				</div>
 				<div class="centerbtn"><button class="submitbtn">提交</button></div>
 			</form>
@@ -31,7 +31,7 @@
 </footer>
 <ul class="rightlink">
 	<li class="phonelinkwrap">
-		<a href="javascript:;" class="phonelink"></a>
+		<a href="tel:{web name='tel' /}" class="phonelink"></a>
 		<span class="phonenum">{web name='tel' /}</span>
 	</li>
 	<li class="erweimawrap">
@@ -42,4 +42,11 @@
 		<a href="javascript:;" class="gotoplink"></a>
 	</li>
 </ul>
+<div class="noticepop popwrap">
+	提交成功，我们会尽快和您联系！
+</div>
+<div class="forpcpop popwrap">
+	请在PC端访问本网站！
+</div>
+
 <script type="text/javascript" src="__PUBLIC__js/common.js"></script>

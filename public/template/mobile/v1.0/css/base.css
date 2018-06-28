@@ -32,7 +32,7 @@ blockquote {
 html {
   color: #333;
   background: #fff;
-  font-size: 62.5%;
+  font-size: .14rem;
 }
 body,
 button,
@@ -45,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 1.4em;
+  font-size: .14rem;
   font-family: microsoft yahei, SimSun, Verdana, Arial, sans-serif;
 }
 img,
@@ -93,8 +93,15 @@ a:focus {
 }
 /*内容宽度*/
 .w1200 {
-  width: 1200px;
-  margin: 0 auto;
+  width: 94%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.wrap {
+  width: 100%;
+  min-width: 100%;
+  max-width: 750px;
+  margin: 0;
 }
 /*清理浮动*/
 .clearfix:before,
@@ -112,95 +119,80 @@ a:focus {
 .clearfix {
   *zoom: 1;
 }
-.wrap {
-  min-width: 1200px;
+.main {
+  padding-bottom: .5rem;
 }
 /*头部*/
 header {
-  border-bottom: 1px solid #ddd;
+  position: fixed;
+  height: 1rem;
+  line-height: 1rem;
+  background: url(../images/headBg.png) left top;
+  z-index: 4000;
 }
-.main {
-  padding-bottom: 370px;
+header .mobilelogo img {
+  width: 1.47rem;
 }
-.logolink {
-  display: block;
-  height: 80px;
-  line-height: 80px;
-}
-.nav {
-  margin-left: 180px;
-}
-.nav li {
-  float: left;
-  height: 80px;
-  line-height: 80px;
-  position: relative;
-  border-bottom: 3px solid #fff;
-}
-.nav li > a {
-  display: block;
-  padding: 0 30px;
-  font-size: 14px;
-}
-.nav li:hover > a {
-  color: #01AAED;
-}
-.nav li:hover .subnav {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-top: none;
-  display: block;
-}
-.nav li.on {
-  border-color: #01AAED;
-}
-.nav li.on > a {
-  color: #01AAED;
-}
-.nav li .subnav {
-  display: none;
-  position: absolute;
-  top: 83px;
-  left: 0;
-  width: 100%;
-}
-.nav li .subnav a {
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  font-size: 14px;
+header .linkbtn {
+  display: inline-block;
+  width: 2rem;
+  height: .6rem;
+  line-height: .6rem;
   text-align: center;
-}
-.nav li .subnav a:hover {
-  color: #01AAED;
-}
-.topRightBtn {
-  display: block;
-  font-size: 14px;
-  width: 130px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 10px;
   color: #fff;
-  text-align: center;
+  font-size: .3rem;
+  border-radius: .1rem;
+  margin: .2rem auto .25rem .8rem;
   background-color: #01AAED;
-  margin-top: 20px;
 }
-.topRightBtn:hover {
+header .navbtn {
+  width: .48rem;
+  height: .48rem;
+  margin-top: .26rem;
+}
+header .navwrap {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 1rem;
+  background: url(../images/headBg.png) left top;
+  z-index: 4000;
+}
+header .navwrap .nav {
+  text-align: right;
+  padding: 0 3%;
+}
+header .navwrap .nav li {
+  border-bottom: 1px solid #fff;
+}
+header .navwrap .nav li a {
+  display: block;
   color: #fff;
-  opacity: .8;
+  font-size: .3rem;
+}
+header .navwrap .subnav {
+  display: none;
+}
+header .navwrap .subnav a {
+  display: block;
+  padding-right: 10%;
+  border-top: 1px solid #fff;
+}
+header .navwrap .subnav a:first-child {
+  border-top: none;
 }
 /*底部*/
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: 352px;
   background: url(../images/blackbg.png) left top;
 }
 .copyright {
   text-align: center;
-  line-height: 46px;
+  line-height: .45rem;
+  padding: 0 3%;
+  font-size: .24rem;
   color: #fff;
   border-top: 1px solid #ddd;
 }
@@ -209,27 +201,28 @@ footer {
   padding-bottom: 10px;
 }
 .footleft {
-  width: 600px;
+  width: 100%;
 }
 .footleft .contactnotice {
   color: #fff;
+  font-size: .3rem;
   margin-bottom: 15px;
 }
 .footleft .formitem {
   margin-bottom: 15px;
 }
 .footleft .formitem input {
-  width: 400px;
+  width: 96%;
   height: 40px;
   line-height: 40px;
-  font-size: 14px;
-  padding: 0 10px;
+  font-size: .24rem;
+  padding: 0 2%;
   border: 1px solid #707682;
   outline: none;
 }
 .footleft .submitbtn {
   display: block;
-  width: 420px;
+  width: 100%;
   height: 40px;
   line-height: 40px;
   font-size: 16px;
@@ -239,16 +232,19 @@ footer {
   border: none;
 }
 .footright {
-  width: 580px;
-  margin-left: 20px;
+  width: 100%;
 }
 .footright .messageul {
   margin-top: 35px;
 }
 .footright .messageul li {
-  color: #fff;
-  margin-bottom: 15px;
+  color: #fff!important;
+  margin-bottom: .2rem;
+  font-size: .24rem;
   line-height: 25px;
+}
+.footright .messageul li > img {
+  width: .5rem;
 }
 .footright .messageul li span {
   margin-left: 10px;
@@ -256,68 +252,64 @@ footer {
 /*右侧导航*/
 .rightlink {
   position: fixed;
-  right: 10px;
-  top: 50%;
+  right: 0;
+  top: 60%;
   z-index: 3000;
 }
 .rightlink li {
-  margin-bottom: 10px;
+  width: .8rem;
+  height: .8rem;
+  margin-bottom: .1rem;
   position: relative;
 }
 .rightlink li a {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: .8rem;
+  height: .8rem;
   text-align: center;
 }
 .rightlink li .phonenum {
   position: absolute;
-  width: 150px;
-  height: 50px;
-  line-height: 50px;
+  width: 2rem;
+  height: .8rem;
+  line-height: .8rem;
+  font-size: .24rem;
   text-align: center;
   top: 0;
-  right: 50px;
+  right: 1rem;
   color: #fff;
   transition: opacity 1s;
   background-color: #01AAED;
   opacity: 0;
 }
+.rightlink li .phonenum.on {
+  opacity: 1;
+  transition-duration: .5s;
+}
 .rightlink li .erweimaimg {
   position: absolute;
-  right: 55px;
+  width: 1.4rem;
+  height: 1.4rem;
+  right: 1.1rem;
   top: 0;
   transition: opacity 1s;
   opacity: 0;
 }
-.rightlink li .phonelink {
-  background: #f0f0f0 url(../images/righticon1.png) center 15px no-repeat;
+.rightlink li .erweimaimg.on {
+  opacity: 1;
+  transition-duration: .5s;
 }
-.rightlink li .phonelink:hover {
-  background-position: center -62px;
-  background-color: #01AAED;
+.rightlink li .phonelink {
+  background: #f0f0f0 url(../images/righticon1.png) center 0.3rem no-repeat;
+  background-size: .32rem;
 }
 .rightlink li .erweimalink {
-  background: #f0f0f0 url(../images/righticon2.png) center 12px no-repeat;
-}
-.rightlink li .erweimalink:hover {
-  background-position: center -59px;
-  background-color: #01AAED;
+  background: #f0f0f0 url(../images/righticon2.png) center 0.28rem no-repeat;
+  background-size: .32rem;
 }
 .rightlink li .gotoplink {
-  background: #f0f0f0 url(../images/righticon3.png) center 10px no-repeat;
-}
-.rightlink li .gotoplink:hover {
-  background-position: center -59px;
-  background-color: #01AAED;
-}
-.rightlink .phonelinkwrap:hover .phonenum {
-  opacity: 1;
-  transition-duration: .5s;
-}
-.rightlink .erweimawrap:hover .erweimaimg {
-  opacity: 1;
-  transition-duration: .5s;
+  background: #f0f0f0 url(../images/righticon3.png) center 0.25rem no-repeat;
+  background-size: .32rem;
 }
 /*分页*/
 .page {
@@ -375,4 +367,19 @@ footer {
   display: inline-block;
   padding: 0 3px 0 8px;
   color: #999;
+}
+/*信息提交成功提示*/
+.popwrap {
+  display: none;
+  position: fixed;
+  bottom: 0rem;
+  left: 0;
+  width: 100%;
+  font-size: .28rem;
+  height: .8rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #fff;
+  background: url(../images/headBg.png) left top;
+  z-index: 5000;
 }

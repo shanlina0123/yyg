@@ -46,11 +46,10 @@
 
 {if condition="$cate['ename'] eq 'news'" }
 {banner cid='$cid'}
-<div class="bannerwrap" style="background: url({$banner.img}) center no-repeat;">
-	<div class="bannertext w1200">
-		<p class="texts">{$banner.title}</p>
-		<a href="#btnlink" class="bannerbtn">{$banner.btntitle}</a>
-		<p class="bannerphone"><img src="__PUBLIC__images/bannerphone.png">&nbsp;{web name='tel' /}</p>
+<div class="recruitbanner" style="background: url({$banner.img}) center no-repeat;">
+	<div class="w1200">
+		<div class="topbanner">{$banner.title}</div>
+		<div class="bottombanner">{$banner.childtitle} <br><span>{$banner.childatitle}</span></div>
 	</div>
 </div>
 {/banner}

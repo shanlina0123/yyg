@@ -5,28 +5,26 @@
             padding-right: 20px;
         }
 
-        .editionleft span {
-            padding-left: 80px;
-            padding-right: 80px;
-        }
         .starwrap{
-            float: left!important;
-            padding:52px 0 10px 0!important;
-            margin-bottom: 0!important;
+            width:100%;
+            padding-left:0!important;
+            margin-bottom: 0!important
+        }
+        .starwrap p{
+            margin-bottom: 0!important
         }
 
         .starwrap >li {
             position: relative;
-            width: 250px;
-            height: 250px;
-            border-radius: 250px;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 5rem;
             background-color: #FF5722;
         }
 
         .starwrap .lititle, .starwrap .texts {
            display: block;
         }
-
 
     </style>
     {product cid='$cid' brand='Section1'}
@@ -64,7 +62,7 @@
                 <textarea style="display:none;">{$product.content}</textarea>
                 {/if}
             </div>
-            <div class="edtion2right fl" style="background: url(__PUBLIC__images/phonebg.png) center no-repeat;">
+            <div class="edtion2right fl">
                 <span>{$product.title}</span>
             </div>
             {/product}
@@ -72,8 +70,7 @@
         <!--云易装小程序客户端-->
         {product cid='$cid' brand='Section4'}
         <div class="edition1 w1200 clearfix">
-            <div class="editionleft editionleft3 fl"
-                 style="background: url(__PUBLIC__images/phonebg.png) center no-repeat;">
+            <div class="editionleft editionleft3 fl">
                 <span>{$product.title}</span>
             </div>
                 {if condition="get_system_value('site_editor') eq 'ue'"}

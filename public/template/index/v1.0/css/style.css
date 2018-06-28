@@ -401,6 +401,17 @@
   font-size: 26px;
   padding-top: 15px;
 }
+
+.partul .parttext > a{
+  color:#ffffff;
+}
+
+.partul .parttext > a:hover{
+  color:#ffffff;
+  border-bottom:#ffffff  1px  solid;
+  line-height: 25px;
+}
+
 .partul .forwho {
   line-height: 25px;
 }

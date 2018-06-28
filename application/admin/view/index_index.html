@@ -14,6 +14,8 @@
                 //外链判断
                 if (nav.type == 1){
                     cate_html += '<li><a href="'+ nav.url +'" target="_blank"><i class="nav"></i><em>'+ nav.name +'</em></a></li>';
+                }else if (nav.type == 2){
+                    cate_html += '<li><a href="'+ nav.url +'" target="_blank"><i class="nav"></i><em>'+ nav.name +'</em></a></li>';
                 }else{
                     if (url_cls.status == 1) {
                         var furl = url_cls.url + '?id=' + nav.id;
